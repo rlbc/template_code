@@ -27,7 +27,7 @@ fi
 while getopts ":hVt:" options
 do
   case "$options" in
-    t) THREADS ;;
+    t) THREADS="$OPTARG" ;;
   
     h)
       echo "$USAGE_MSG"
@@ -56,5 +56,9 @@ done
 MYTIME=$(date +%Y%m%d%-H%M%S)
 
 # From here push logs to specific file
-exec 1>>$(basename "$0")${MYTIME}.log
-exec 2>>$(basename "$0")${MYTIME}.log
+exec 1>>$(basename "$0")_${MYTIME}.log
+exec 2>>$(basename "$0")_${MYTIME}_2.log
+
+##############
+# CODE.......#
+##############
