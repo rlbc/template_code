@@ -3,7 +3,7 @@ Template codes
 
 `date +%Y%m%d%-H%M%S`
 
-Bash 1 and 2 to separate files
+stdout and stderr 1 and 2 to separate files
 ```
 exec 1>>${LOG_FILE}
 exec 2>>${LOG_FILE}
