@@ -41,3 +41,8 @@ check_dir_exists() {
     fi
 }
 ```
+---
+Subset a fasta file:
+```
+samtools faidx genome.fa chr1 chr2:1:2000 > genome_subset.fa
+```
